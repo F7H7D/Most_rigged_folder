@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+
+struct node{
+    int data;
+    node* next;
+};
+
+node* constructnode(int data){
+    node* temp = new node;
+    temp -> data = data;
+    temp -> next = nullptr;
+    return temp;
+}
+
+int main(){
+    node* a = constructnode(10);
+    node* b = constructnode(20);
+    node* c = constructnode(40);
+    node* nwnode = constructnode(30);
+
+    a->next = b;
+    b->next = nwnode;
+    nwnode->next = c;
+    c->next = nullptr;
+    a->next = nullptr;
+    delete a;
+
+
+    node* temp = b;
+
+
+
+
+    while(temp != nullptr){
+        cout << temp->data <<endl;
+        temp = temp->next;
+    }
+
+
+
+    return 0;
+}
