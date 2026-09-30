@@ -1,6 +1,6 @@
 📌 Project Status
 
-🟢 Beginner Project
+🟢 Beginner shits
 
 Made while learning C++.
 
